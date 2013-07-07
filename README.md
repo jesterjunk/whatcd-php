@@ -23,3 +23,15 @@ Example usage
 	);
 
 	print_r($response);
+	
+	
+
+License
+==========
+This software is distributed under the BSD 2-clause license, more information can be found at http://opensource.org/licenses/bsd-license.php
+
+
+Notes
+=========
+
+There is no reason why this class won't support other Gazelle websites, however they are not officially supported by this code, and adjustments will be required.
