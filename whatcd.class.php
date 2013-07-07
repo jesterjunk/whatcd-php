@@ -35,7 +35,7 @@ class WhatCD {
 
 	/**
 	 * Logs into what.cd
-	 * @return null
+	 * @return boolean
 	*/
 
 	public function login(){
@@ -71,7 +71,7 @@ class WhatCD {
 			return true;
 		}
 
-		return $return;
+		return true;
 
 	}
 
