@@ -3,7 +3,8 @@ whatcd-php
 
 PHP class used to access the What.CD API
 
-A list of all currently available methods is available at What.CD: wiki.php?action=article&id=998
+A list of all currently available methods can be found at the link below:
+https://github.com/WhatCD/Gazelle/wiki/JSON-API-Documentation
 
 Requirements
 =============
