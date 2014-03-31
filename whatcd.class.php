@@ -61,12 +61,12 @@ class WhatCD {
 		$return = curl_exec($ch);
 		curl_close($ch);
 
-		if (preg_match('/Your username or password was incorrect/', $return)){
+		if (false !== strpos($return, 'Your username or password was incorrect')){
 			// Username or password incorrect, throw exception
 			throw new Exception('[What.CD API] Username or password rejected by What.CD');
 		}
 
-		if (preg_match('/Manage sessions/', $return)){
+		if (false !== strpos($return, 'Manage sessions')){
 			// Logged in
 			return true;
 		}
