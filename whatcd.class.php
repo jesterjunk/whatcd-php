@@ -7,13 +7,11 @@
  * @link https://github.com/GLaDOSDan/whatcd-php
  */
 class WhatCD {
-	
+
 	private $username;
 	private $password;
 
 	public 	$URI = 'https://what.cd/ajax.php';
-
-	private $cookie_jar = '/tmp/what.cd.cookies';
 
 	/**
 	 * Constructor to load username and password into variables for other functions in the class to access
@@ -25,6 +23,7 @@ class WhatCD {
 	public function __construct($username, $password){
 		$this->username = $username;
 		$this->password = $password;
+		$this->cookie_jar = dirname(__FILE__).'./tmp/what.cd.cookies';
 
 		if (empty($this->password) || empty($this->username)){
 			throw new Exception('[What.CD API] Invalid username or password passed to constructor');
@@ -44,7 +43,7 @@ class WhatCD {
 			'username' => $this->username,
 			'password' => $this->password,
 			'keeplogged' => '1',
-			'login' => 'Login'
+			'login' => 'Log in'
 		);
 
 		$ch = curl_init('https://what.cd/login.php');
