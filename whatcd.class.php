@@ -134,7 +134,7 @@ class WhatCD {
 		$ch = curl_init($URI);
 
 		curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
-		curl_setopt($ch, CURLOPT_USERAGENT, 'GLaDOSDan/whatcd-php');
+		curl_setopt($ch, CURLOPT_USERAGENT, 'thejester/whatcd-php');
 		curl_setopt($ch, CURLOPT_TIMEOUT, 15);
 		curl_setopt($ch, CURLOPT_COOKIEFILE, $this->cookie_jar);
 		curl_setopt($ch, CURLOPT_COOKIEJAR, $this->cookie_jar);
