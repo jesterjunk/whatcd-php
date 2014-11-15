@@ -13,6 +13,7 @@ class WhatCD {
 
 	public 	$URI = 'https://what.cd/ajax.php';
 
+
 	/**
 	 * Constructor to load username and password into variables for other functions in the class to access
 	 * @param str $username
@@ -32,6 +33,7 @@ class WhatCD {
 		return null;
 	}
 
+
 	/**
 	 * Logs into what.cd
 	 * @return boolean
@@ -48,7 +50,7 @@ class WhatCD {
 
 		$ch = curl_init('https://what.cd/login.php');
 		curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
-		curl_setopt($ch, CURLOPT_USERAGENT, 'GLaDOSDan/whatcd-php');
+		curl_setopt($ch, CURLOPT_USERAGENT, 'thejester/whatcd-php');
 		curl_setopt($ch, CURLOPT_TIMEOUT, 15);
 		curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, false);
 		curl_setopt($ch, CURLOPT_COOKIEFILE, $this->cookie_jar);
@@ -74,6 +76,7 @@ class WhatCD {
 
 	}
 
+
 	/**
 	 * Interface for making request to What.CD API
 	 * @param str $action
@@ -84,6 +87,7 @@ class WhatCD {
 	public function request($action, $arguments = null){
 		return $this->parse_response($this->curl_request($action, $arguments));
 	}
+
 
 	/**
 	 * Parse response from What.CD and return the results
@@ -106,6 +110,7 @@ class WhatCD {
 			}
 		}
 	}
+
 
 	/**
 	 * Make cURL request to API
